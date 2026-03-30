@@ -1,0 +1,191 @@
+/* ═══════════════════════
+   FRAME 3 — ABOUT ME
+═══════════════════════ */
+#about {
+  background: rgba(16, 15, 28, 0.7);
+}
+
+.about-h {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.6px;
+  margin-bottom: 18px;
+}
+
+.about-h em {
+  font-style: normal;
+  color: #9d8fe0;
+}
+
+.about-sub {
+  font-size: 1.12rem;
+  color: #9898b0;
+  max-width: 620px;
+  margin: 0 auto 70px;
+  line-height: 1.8;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 70px;
+  text-align: left;
+}
+
+.acard {
+  background: #1e1d30;
+  border: 1px solid rgba(120, 110, 200, 0.2);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.acard:hover {
+  transform: translateY(-4px);
+  border-color: #7c6fcd;
+}
+
+.acard-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(124, 111, 205, 0.14);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.acard-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: #9d8fe0;
+}
+
+.acard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.acard p {
+  font-size: 1.02rem;
+  color: #9898b0;
+  line-height: 1.75;
+}
+
+.tools-h {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.tools-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tchip {
+  padding: 7px 20px;
+  border: 1px solid rgba(120, 110, 200, 0.2);
+  border-radius: 6px;
+  font-size: 0.79rem;
+  font-weight: 500;
+  color: #c5c5d8;
+  background: #1e1d30;
+  transition: border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.tchip:hover {
+  border-color: #7c6fcd;
+  color: #9d8fe0;
+}
+
+@media (max-width: 900px) {
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-h {
+    font-size: 2rem;
+  }
+
+  .about-sub {
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 48px;
+  }
+
+  .about-h {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .about-sub {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+
+  .acard {
+    padding: 24px 20px;
+  }
+
+  .acard h3 {
+    font-size: 1.1rem;
+  }
+
+  .acard p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-cards {
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .about-h {
+    font-size: 1.5rem;
+  }
+
+  .about-sub {
+    font-size: 0.85rem;
+    margin-bottom: 32px;
+  }
+
+  .acard {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+
+  .acard-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .acard h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .acard p {
+    font-size: 0.8rem;
+  }
+}

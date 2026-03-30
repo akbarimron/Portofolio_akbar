@@ -1,0 +1,34 @@
+/* footer */
+.footer {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(120, 110, 200, 0.2);
+  padding: 22px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 0.76rem;
+  color: #9898b0;
+}
+
+.footer a {
+  font-size: 0.76rem;
+  color: #9898b0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #9d8fe0;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 18px 22px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

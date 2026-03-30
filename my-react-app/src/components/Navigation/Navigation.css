@@ -1,0 +1,76 @@
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 600px;
+  background: rgba(18, 17, 31, 0.93);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(120, 110, 200, 0.2);
+  transition: background 0.2s;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9d8fe0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 68px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #c5c5d8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+    left: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    height: 55px;
+    padding: 0 14px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+    left: 14px;
+  }
+}

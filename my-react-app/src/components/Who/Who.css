@@ -1,0 +1,134 @@
+/* ═══════════════════════
+   FRAME 2 — WHO IS
+═══════════════════════ */
+#who {
+  background: rgba(24, 22, 44, 0.6);
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 120px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.who-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+  margin-bottom: 14px;
+}
+
+.who-title em {
+  font-style: normal;
+  color: #9d8fe0;
+}
+
+.who-line {
+  width: 48px;
+  height: 2px;
+  background: #7c6fcd;
+  margin: 14px 0 22px;
+}
+
+.who-text p {
+  font-size: 1.15rem;
+  color: #9898b0;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.who-text strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.who-text .hl {
+  color: #9d8fe0;
+  font-weight: 600;
+}
+
+.who-text .hl2 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.who-photo {
+  width: 390px;
+  height: 360px;
+  background: linear-gradient(145deg, #222050, #181630);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.2rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .who-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .who-photo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .who-title {
+    font-size: 1.8rem;
+  }
+
+  .who-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-grid {
+    gap: 40px;
+  }
+
+  .who-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .who-text p {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .who-photo {
+    max-width: 250px;
+    height: 220px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .who-grid {
+    gap: 30px;
+  }
+
+  .who-title {
+    font-size: 1.4rem;
+  }
+
+  .who-text p {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  .who-photo {
+    max-width: 200px;
+    height: 180px;
+    font-size: 3rem;
+  }
+}
