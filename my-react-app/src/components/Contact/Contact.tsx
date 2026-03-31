@@ -19,12 +19,12 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <div className="sw center reveal">
-        <h2 className="contact-h">Let's <em>Work Together</em></h2>
-        <p className="contact-sub">Looking for a partner for your next digital project? Let's collaborate and build something great together. Drop me a message!</p>
+      <div className="sw center">
+        <h2 className="contact-h reveal-up">Let's <em>Work Together</em></h2>
+        <p className="contact-sub reveal-up" style={{ animationDelay: '0.1s' }}>Looking for a partner for your next digital project? Let's collaborate and build something great together. Drop me a message!</p>
 
         <div className="cgrid">
-          <div>
+          <div className="reveal-left" style={{ animationDelay: '0.2s' }}>
             <div className="ci-lbl">Email</div>
             <div className="ci-val">
               <a href="mailto:akbarimrons@gmail.com">akbarimrons@gmail.com</a>
@@ -52,31 +52,34 @@ export default function Contact() {
             <div className="ci-val">Indonesia</div>
           </div>
 
-          <div>
+          <div className="reveal-right" style={{ animationDelay: '0.3s' }}>
             <label className="flbl">Name</label>
             <input
-              className="finput"
+              className="finput reveal-up"
               type="text"
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              style={{ animationDelay: '0.35s' }}
             />
             <label className="flbl">Email</label>
             <input
-              className="finput"
+              className="finput reveal-up"
               type="email"
               placeholder="your@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              style={{ animationDelay: '0.4s' }}
             />
             <label className="flbl">Message</label>
             <textarea
-              className="ftextarea"
+              className="ftextarea reveal-up"
               placeholder="Tell us about your project..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              style={{ animationDelay: '0.45s' }}
             ></textarea>
-            <button className="btn-send" onClick={handleSend}>
+            <button className="btn-send reveal-up" onClick={handleSend} style={{ animationDelay: '0.5s' }}>
               Send Message
             </button>
           </div>

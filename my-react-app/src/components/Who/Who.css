@@ -23,6 +23,8 @@
 }
 
 .who-title em {
+  font-size: 3.8rem;
+  font-weight: 800;
   font-style: normal;
   color: #9d8fe0;
 }
@@ -35,10 +37,13 @@
 }
 
 .who-text p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #9898b0;
-  line-height: 1.9;
-  margin-bottom: 22px;
+  line-height: 1.95;
+  letter-spacing: 0.3px;
+  margin-bottom: 24px;
+  max-width: 680px;
+  text-align: justify;
 }
 
 .who-text strong {
@@ -58,15 +63,71 @@
 
 .who-photo {
   width: 390px;
-  height: 360px;
+  height: 390px;
   background: linear-gradient(145deg, #222050, #181630);
-  border-radius: 18px;
+  border-radius: 50%;
+  border: 4px solid rgba(157, 143, 224, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5.2rem;
   flex-shrink: 0;
   overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 24px rgba(124, 111, 205, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.who-photo::before {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157, 143, 224, 0.45) 0%, rgba(124, 111, 205, 0.22) 35%, rgba(124, 111, 205, 0) 72%);
+  filter: blur(14px);
+  z-index: 0;
+  opacity: 0.9;
+  animation: whoGlowPulse 4s ease-in-out infinite;
+}
+
+.who-photo:hover {
+  transform: translateY(-7px) scale(1.02);
+  border-color: rgba(157, 143, 224, 1);
+  box-shadow: 0 0 36px rgba(157, 143, 224, 0.55), 0 14px 34px rgba(10, 10, 24, 0.45);
+}
+
+.who-photo:hover::before {
+  opacity: 1;
+  animation-duration: 1.8s;
+}
+
+.who-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.who-photo:hover .who-photo-img {
+  transform: scale(1.04);
+  filter: saturate(1.08) contrast(1.05);
+}
+
+@keyframes whoGlowPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.72;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.98);
+    opacity: 0.72;
+  }
 }
 
 @media (max-width: 900px) {
@@ -78,6 +139,7 @@
   .who-photo {
     width: 100%;
     max-width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
 
@@ -87,6 +149,9 @@
 
   .who-text p {
     font-size: 0.95rem;
+    line-height: 1.88;
+    max-width: 100%;
+    text-align: left;
   }
 }
 
@@ -102,13 +167,14 @@
 
   .who-text p {
     font-size: 0.9rem;
+    line-height: 1.82;
     margin-bottom: 16px;
+    letter-spacing: 0.2px;
   }
 
   .who-photo {
     max-width: 250px;
-    height: 220px;
-    font-size: 3.5rem;
+    height: 250px;
   }
 }
 
@@ -121,14 +187,19 @@
     font-size: 1.4rem;
   }
 
+  .who-title em {
+    font-size: 1.9rem;
+  }
+
   .who-text p {
     font-size: 0.85rem;
+    line-height: 1.75;
     margin-bottom: 14px;
+    letter-spacing: 0.15px;
   }
 
   .who-photo {
     max-width: 200px;
-    height: 180px;
-    font-size: 3rem;
+    height: 200px;
   }
 }

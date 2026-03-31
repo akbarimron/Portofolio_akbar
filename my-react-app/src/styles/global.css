@@ -35,6 +35,56 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  cursor: url('/cursor-default.svg') 16 16, auto;
+}
+
+body.custom-cursor-enabled {
+  cursor: none;
+}
+
+a,
+button,
+[role='button'],
+input[type='submit'],
+input[type='button'],
+.pcard,
+.see-more-btn {
+  cursor: url('/cursor-pointer.svg') 2 2, pointer;
+}
+
+body.custom-cursor-enabled a,
+body.custom-cursor-enabled button,
+body.custom-cursor-enabled [role='button'],
+body.custom-cursor-enabled input[type='submit'],
+body.custom-cursor-enabled input[type='button'],
+body.custom-cursor-enabled .pcard,
+body.custom-cursor-enabled .see-more-btn,
+body.custom-cursor-enabled input,
+body.custom-cursor-enabled textarea,
+body.custom-cursor-enabled select {
+  cursor: none !important;
+}
+
+input,
+textarea,
+select {
+  cursor: text;
+}
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  a,
+  button,
+  [role='button'],
+  input[type='submit'],
+  input[type='button'],
+  .pcard,
+  .see-more-btn {
+    cursor: pointer;
+  }
 }
 
 html,
@@ -93,17 +143,128 @@ body,
 }
 
 /* ═══════════════════════
-   REVEAL ANIMATION
+   REVEAL ANIMATIONS
 ═══════════════════════ */
+
+/* Base reveal - fade in + slide up */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition: opacity 0.65s ease 0.1s, transform 0.65s ease 0.1s;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
+}
+
+/* Slide up animation */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s, 
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide down animation */
+.reveal-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s,
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.reveal-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide left animation */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s,
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide right animation */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s,
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale animation */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.7s ease 0.15s,
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade animation (opacity only) */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.8s ease 0.2s;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* Parallax element - will be moved by JS */
+.reveal-parallax {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease 0.15s,
+              transform 0.7s ease 0.15s;
+}
+
+.reveal-parallax.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation setup */
+@keyframes revealStagger {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-stagger.visible {
+  animation: revealStagger 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 /* ═══════════════════════

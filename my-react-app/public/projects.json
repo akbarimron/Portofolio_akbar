@@ -1,0 +1,138 @@
+{
+  "sections": [
+    {
+      "id": "web",
+      "title": "Web Projects",
+      "subtitle": "Some of my best Web Projects",
+      "animationDelay": 0.2,
+      "moreButtonDelay": 0.7,
+      "isVideo": false,
+      "projects": [
+        {
+          "id": 1,
+          "title": "UKM IBAF UPI",
+          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "tags": ["React", "Firebase", "Bootstrap"],
+          "bgGradient": "linear-gradient(135deg,#0e2040,#1a3264)",
+          "hidden": false
+        },
+        {
+          "id": 2,
+          "title": "GYM UPI",
+          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "tags": ["Laravel", "Firebase", "Bootstrap"],
+          "bgGradient": "linear-gradient(135deg,#181050,#261870)",
+          "hidden": false
+        },
+        {
+          "id": 3,
+          "title": "Campus Web Portal",
+          "desc": "Modern landing and profile pages for campus organizations.",
+          "tags": ["React", "TypeScript", "Vite"],
+          "bgGradient": "linear-gradient(135deg,#0c1c38,#163058)",
+          "hidden": false
+        },
+        {
+          "id": 4,
+          "title": "Working Login Page",
+          "desc": "Full-stack login with PHP and MySQL database authentication.",
+          "tags": ["PHP", "MySQL", "CSS"],
+          "bgGradient": "linear-gradient(135deg,#200d3a,#301460)",
+          "hidden": true
+        },
+        {
+          "id": 5,
+          "title": "Simple Counter",
+          "desc": "Interactive counter website with vanilla JavaScript.",
+          "tags": ["HTML", "CSS", "JS"],
+          "bgGradient": "linear-gradient(135deg,#102030,#1c3048)",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "title": "Video Projects",
+      "subtitle": "Some of my best Video Projects",
+      "animationDelay": 0.8,
+      "moreButtonDelay": 1.3,
+      "isVideo": true,
+      "projects": [
+        {
+          "id": 1,
+          "title": "3D Asrama UPI",
+          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "tags": ["Blender"],
+          "bgGradient": "linear-gradient(135deg,#1a0538,#300860)",
+          "hidden": false
+        },
+        {
+          "id": 2,
+          "title": "Teaser OLKA UPI 2025",
+          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "tags": ["After Effect"],
+          "bgGradient": "linear-gradient(135deg,#0a1535,#18255a)",
+          "hidden": false
+        },
+        {
+          "id": 3,
+          "title": "Teaser Orientation Program",
+          "desc": "Teaser video with energetic cut and smooth pacing.",
+          "tags": ["After Effect", "Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#1e0830,#36104e)",
+          "hidden": false
+        },
+        {
+          "id": 4,
+          "title": "Aftermovie OLKA Asrama",
+          "desc": "Full aftermovie with cinematic color grade and VFX.",
+          "tags": ["After Effect", "Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#100830,#201450)",
+          "hidden": true
+        },
+        {
+          "id": 5,
+          "title": "Aftermovie BAKSA Asrama",
+          "desc": "Event documentation with dynamic transitions.",
+          "tags": ["Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#0e1c38,#182848)",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design Projects",
+      "subtitle": "Some of my best Design Projects",
+      "animationDelay": 1.35,
+      "moreButtonDelay": 1.8,
+      "isVideo": false,
+      "projects": [
+        {
+          "id": 1,
+          "title": "Brand Identity Kit",
+          "desc": "Logo system and visual guideline for student brand campaign.",
+          "tags": ["Illustrator", "Photoshop"],
+          "bgGradient": "linear-gradient(135deg,#1b1135,#2e1a54)",
+          "hidden": false
+        },
+        {
+          "id": 2,
+          "title": "Social Media Design Pack",
+          "desc": "Carousel and reels cover templates for monthly social content.",
+          "tags": ["Figma", "Canva"],
+          "bgGradient": "linear-gradient(135deg,#12253e,#1d3f64)",
+          "hidden": false
+        },
+        {
+          "id": 3,
+          "title": "Event Poster Series",
+          "desc": "Poster collection for campus events with modern visual language.",
+          "tags": ["Illustrator", "InDesign"],
+          "bgGradient": "linear-gradient(135deg,#2e1030,#4a1845)",
+          "hidden": true
+        }
+      ]
+    }
+  ]
+}

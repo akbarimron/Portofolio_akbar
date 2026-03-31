@@ -30,13 +30,14 @@ const IconComponent = ({ type }: { type: string }) => {
 export default function About() {
   return (
     <section id="about">
-      <div className="sw center reveal">
-        <h2 className="about-h">About <em>Me</em></h2>
-        <p className="about-sub">I believe that creativity and technology are the keys to delivering engaging and functional visual solutions for every client</p>
+      <div className="sw center">
+        <h2 className="about-h reveal-up">About <em>Me</em></h2>
+        <p className="about-sub reveal-up" style={{ animationDelay: '0.1s' }}>I believe that creativity and technology are the keys to delivering engaging and functional visual solutions for every client</p>
+
 
         <div className="about-cards">
-          {ABOUT_CARDS.map((card) => (
-            <div key={card.id} className="acard">
+          {ABOUT_CARDS.map((card, index) => (
+            <div key={card.id} className="acard reveal-scale" style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
               <div className="acard-icon">
                 <IconComponent type={card.icon} />
               </div>
@@ -46,17 +47,17 @@ export default function About() {
           ))}
         </div>
 
-        <div className="tools-h">Tools and Technology</div>
+        <div className="tools-h reveal-up" style={{ animationDelay: '0.3s' }}>Tools and Technology</div>
         <div className="tools-row">
-          {TOOLS_TECH.slice(0, 7).map((tool) => (
-            <span key={tool.name} className="tchip">
+          {TOOLS_TECH.slice(0, 7).map((tool, index) => (
+            <span key={tool.name} className="tchip reveal-up" style={{ animationDelay: `${0.4 + index * 0.05}s` }}>
               {tool.name}
             </span>
           ))}
         </div>
         <div className="tools-row" style={{ marginTop: '10px' }}>
-          {TOOLS_TECH.slice(7).map((tool) => (
-            <span key={tool.name} className="tchip">
+          {TOOLS_TECH.slice(7).map((tool, index) => (
+            <span key={tool.name} className="tchip reveal-up" style={{ animationDelay: `${0.75 + index * 0.05}s` }}>
               {tool.name}
             </span>
           ))}
