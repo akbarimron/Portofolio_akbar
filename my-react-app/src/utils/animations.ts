@@ -1,20 +1,52 @@
-import { CODE_SNIPPETS, COLORS } from './constants';
-
 export const setupScrollReveal = () => {
   const obs = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
+          // Add stagger delay for multiple elements
+          const staggerDelay = (entry.target as HTMLElement).getAttribute('data-stagger');
+          if (staggerDelay) {
+            (entry.target as HTMLElement).style.animationDelay = `${parseFloat(staggerDelay) * index}ms`;
+          }
           entry.target.classList.add('visible');
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
 
-  document.querySelectorAll('.reveal').forEach((el) => {
+  // Observe all reveal elements and variations
+  document.querySelectorAll('.reveal, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .reveal-parallax').forEach((el) => {
     obs.observe(el);
   });
+};
+
+// Enhanced scroll reveal with parallax effect
+export const setupParallaxScroll = () => {
+  const parallaxElements = document.querySelectorAll('[data-parallax]');
+  
+  if (parallaxElements.length === 0) return;
+
+  const handleParallax = () => {
+    parallaxElements.forEach((el) => {
+      const element = el as HTMLElement;
+      const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
+      const scrollPosition = window.scrollY;
+      const elementOffset = element.getBoundingClientRect().top + scrollPosition;
+      const distance = scrollPosition - elementOffset;
+      
+      element.style.transform = `translateY(${distance * speed}px)`;
+    });
+  };
+
+  window.addEventListener('scroll', handleParallax, { passive: true });
+  return () => window.removeEventListener('scroll', handleParallax);
+};
+
+// Setup scroll animations with observer
+export const setupAdvancedScrollAnimations = () => {
+  setupScrollReveal();
+  setupParallaxScroll();
 };
 
 export const setupNavScroll = () => {

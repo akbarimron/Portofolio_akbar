@@ -12,19 +12,21 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import CustomCursor from './components/CustomCursor/CustomCursor';
 
-import { setupScrollReveal, setupNavScroll } from './utils/animations';
+import { setupAdvancedScrollAnimations, setupNavScroll } from './utils/animations';
 
 function App() {
   useEffect(() => {
-    // Setup scroll reveal animations
-    setupScrollReveal();
+    // Setup advanced scroll reveal animations with parallax
+    setupAdvancedScrollAnimations();
     // Setup nav scroll effect
     setupNavScroll();
   }, []);
 
   return (
     <>
+      <CustomCursor />
       <Background />
       <FloatingCode />
       <Navigation />
