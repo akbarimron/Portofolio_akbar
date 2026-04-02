@@ -2,32 +2,52 @@ import { useEffect, useState } from 'react';
 import { setupScrollReveal } from '../../utils/animations';
 import './Projects.css';
 
-// Import project images
-import ukmibafupiImg from '../../assets/project_assets/UKMIBAFUPI.png';
-import animatedTwibbonVideo from '../../assets/project_assets/animatedTwibbon.mp4';
+const projectAssetModules = import.meta.glob('../../assets/project_assets/*', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
+
+const projectAssetByFileName = Object.entries(projectAssetModules).reduce<Record<string, string>>((acc, [path, assetUrl]) => {
+  const fileName = path.split('/').pop();
+  if (fileName) {
+    acc[fileName.toLowerCase()] = assetUrl;
+  }
+  return acc;
+}, {});
+
+const resolveProjectAsset = (assetPath?: string): string | undefined => {
+  if (!assetPath) {
+    return undefined;
+  }
+
+  const rawFileName = assetPath.split('?')[0]?.split('/').pop();
+  const normalizedFileName = rawFileName?.toLowerCase();
+
+  if (normalizedFileName && projectAssetByFileName[normalizedFileName]) {
+    return projectAssetByFileName[normalizedFileName];
+  }
+
+  return assetPath;
+};
 
 // Map project identifier to image
-const projectImageMap: Record<string, string> = {
-  'UKM IBAF UPI': ukmibafupiImg,
-};
+const projectImageMap: Record<string, string> = {};
 
 // Map project identifier to video
-const projectVideoMap: Record<string, string> = {
-  'Animated Twibbon OLKA UPI 2025': animatedTwibbonVideo,
-};
+const projectVideoMap: Record<string, string> = {};
 
 const getProjectImage = (imageUrl?: string, title?: string): string | undefined => {
   if (title && projectImageMap[title]) {
     return projectImageMap[title];
   }
-  return imageUrl;
+  return resolveProjectAsset(imageUrl);
 };
 
 const getProjectVideo = (videoUrl?: string, title?: string): string | undefined => {
   if (title && projectVideoMap[title]) {
     return projectVideoMap[title];
   }
-  return videoUrl;
+  return resolveProjectAsset(videoUrl);
 };
 
 const useVideoThumbnail = (videoUrl?: string, seekTime = 0.8) => {
