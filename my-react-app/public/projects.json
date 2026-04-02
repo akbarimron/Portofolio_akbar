@@ -11,7 +11,11 @@
         {
           "id": 1,
           "title": "UKM IBAF UPI",
-          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "desc": "Full-stack fitness platform with a member dashboard, training program management, and progress tracking for a campus fitness community.",
+          "detail": "A comprehensive web platform for UKM IBAF (Ideal Body and Fitness) UPI with full-stack features. The system includes: (1) a landing page and community profile with an activity timeline, (2) a backend for managing training programs with exercise guidance, target weight, and member progress tracking, (3) user authentication and role-based access for admin, trainer, and member, (4) an interactive dashboard for monitoring member progress with statistical charts, (5) customizable training programs based on fitness level, (6) a gallery and documentation for community events, and (7) a responsive design that works on all devices. Technologies used: React, Firebase Realtime Database, and Bootstrap for a consistent and modern UI.",
+          "imageUrl": "src/assets/project_assets/UKMIBAFUPI.png",
+          "visitUrl": "https://ibafupi.vercel.app/",
+          "showVisitButton": true,
           "tags": ["React", "Firebase", "Bootstrap"],
           "bgGradient": "linear-gradient(135deg,#0e2040,#1a3264)",
           "hidden": false
@@ -19,35 +23,16 @@
         {
           "id": 2,
           "title": "GYM UPI",
-          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
-          "tags": ["Laravel", "Firebase", "Bootstrap"],
+          "desc": "Information and service management website for GYM UPI with class schedules, member registration, and real-time promo updates.",
+          "detail": "GYM UPI is a web platform designed to digitize campus gym services, from facility information to the member registration flow. Its main features include: (1) a catalog of gym services and facilities, (2) class and workout schedules that are easy to monitor, (3) an online member registration form, (4) a page for promotions and latest announcements, (5) an admin dashboard to manage content, schedules, and registrant data, and (6) a responsive interface that is comfortable to use on both desktop and mobile devices.",
+          "imageUrl": "src/assets/project_assets/GYMUPI.png",
+          "visitUrl": "https://github.com/akbarimron/Gym-UPI-Website.git",
+          "showVisitButton": true,
+          "tags": ["Laravel", "Bootstrap"],
           "bgGradient": "linear-gradient(135deg,#181050,#261870)",
           "hidden": false
-        },
-        {
-          "id": 3,
-          "title": "Campus Web Portal",
-          "desc": "Modern landing and profile pages for campus organizations.",
-          "tags": ["React", "TypeScript", "Vite"],
-          "bgGradient": "linear-gradient(135deg,#0c1c38,#163058)",
-          "hidden": false
-        },
-        {
-          "id": 4,
-          "title": "Working Login Page",
-          "desc": "Full-stack login with PHP and MySQL database authentication.",
-          "tags": ["PHP", "MySQL", "CSS"],
-          "bgGradient": "linear-gradient(135deg,#200d3a,#301460)",
-          "hidden": true
-        },
-        {
-          "id": 5,
-          "title": "Simple Counter",
-          "desc": "Interactive counter website with vanilla JavaScript.",
-          "tags": ["HTML", "CSS", "JS"],
-          "bgGradient": "linear-gradient(135deg,#102030,#1c3048)",
-          "hidden": true
         }
+        
       ]
     },
     {
@@ -60,40 +45,96 @@
       "projects": [
         {
           "id": 1,
-          "title": "3D Asrama UPI",
-          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "title": "After Movie OLKA UPI 2025",
+          "desc": "Cinematic aftermovie capturing highlights from OLKA 2025 (Orientasi Lingkungan Asrama) with professional color grading.",
+          "detail": "Professional aftermovie production featuring 3D visualization of campus dormitory environment with dynamic motion camera work and sophisticated ambient lighting. The video combines colorful B-rolls, and event highlights with cinematic post-processing to create an engaging recap of the event.",
+          "visitUrl": "https://www.instagram.com/reel/DN-N-EaEwVZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/aftermovieOLKA.mp4",
+          "showVisitButton": true,
           "tags": ["Blender"],
           "bgGradient": "linear-gradient(135deg,#1a0538,#300860)",
           "hidden": false
         },
         {
           "id": 2,
-          "title": "Teaser OLKA UPI 2025",
-          "desc": "Looking for a partner for your next digital project? Let's collaborate and build",
+          "title": "Animated Twibbon OLKA UPI 2025",
+          "desc": "High-energy teaser for OLKA (Orientasi Lingkungan Asrama) event featuring fast-paced cuts, dynamic transitions, and animated typography.",
+          "detail": "Animated promotional video for the OLKA (Orientasi Lingkungan Asrama) snappy transitions, and dynamic headlines. The video showcases event highlights through rapid cuts synchronized with upbeat music, colorful graphics, and eye-catching animations designed to generate excitement and increase event awareness across social media platforms.",
+          "visitUrl": "https://www.instagram.com/reel/DPagW2vjVp7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/animatedTwibbon.mp4",
+          "showVisitButton": true,
           "tags": ["After Effect"],
           "bgGradient": "linear-gradient(135deg,#0a1535,#18255a)",
           "hidden": false
         },
         {
           "id": 3,
-          "title": "Teaser Orientation Program",
-          "desc": "Teaser video with energetic cut and smooth pacing.",
+          "title": "DIMASTI-AMLI 2025",
+          "desc": "Online STEAM storytelling competition video featuring Asti exploring the solar system through animation.",
+          "detail": "Animated storytelling video created for the DIMASTI-AMLI 2025 online competition. The concept follows Asti, a character who journeys through the solar system to learn about the planets in an engaging STEAM-based narrative. The video combines character animation, space-themed visuals, and educational storytelling to deliver an interactive and imaginative learning experience.",
+          "visitUrl": "https://youtu.be/CODfqjJPLc0",
+          "videoUrl": "src/assets/project_assets/DIMASTI_AMLI.mp4",
+          "showVisitButton": true,
           "tags": ["After Effect", "Premiere Pro"],
           "bgGradient": "linear-gradient(135deg,#1e0830,#36104e)",
           "hidden": false
         },
         {
           "id": 4,
-          "title": "Aftermovie OLKA Asrama",
-          "desc": "Full aftermovie with cinematic color grade and VFX.",
+          "title": "Cinematography Tari Topeng Indramayu",
+          "desc": "Documentary-style cinematography of traditional Topeng Indramayu dance with cinematic color grading and VFX.",
+          "detail": "Professional cinematography production documenting the cultural Topeng Indramayu traditional dance performance. The production features cinematic color grading, visual effects, and staged pacing to highlight key performance moments. Combines wide establishing shots with intimate dancer close-ups and dynamic camera movement to create a compelling visual narrative of this traditional art form.",
+          "visitUrl": "https://www.instagram.com/reel/DPacXTLDTcj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/taritopengindramayu.mp4",
+          "showVisitButton": true,
           "tags": ["After Effect", "Premiere Pro"],
           "bgGradient": "linear-gradient(135deg,#100830,#201450)",
           "hidden": true
         },
         {
           "id": 5,
-          "title": "Aftermovie BAKSA Asrama",
-          "desc": "Event documentation with dynamic transitions.",
+          "title": "Teaser OLKA UPI 2025",
+          "desc": "Fast-paced event teaser with dynamic transitions and energetic editing style.",
+          "detail": "Quick-cut teaser video for OLKA 2025 (Orientasi Lingkungan Asrama) event featuring rapid transitions, dynamic editing style, and fast-paced narrative flow. The video combines candid event footage, athlete testimonials, and action shots with energy-boosting visual effects and transitions to create excitement and anticipation for the upcoming event.",
+          "visitUrl": "hhttps://www.instagram.com/reel/DNIOvD0zhC3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/teaserolka.mp4",
+          "showVisitButton": true,
+          "tags": ["Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#0e1c38,#182848)",
+          "hidden": true
+        },
+        {
+          "id": 6,
+          "title": "Sosialisasi Angket DPM KEMAKOM UPI",
+          "desc": "Instagram-based survey tutorial video for DPM KEMAKOM with animation and voice over.",
+          "detail": "Animated socialization video created for DPM KEMAKOM's Instagram campaign to guide students in submitting their aspirations through the questionnaire. The video explains the purpose of the survey and the survey flow step by step using motion graphics, animated text, and voice over narration. It focuses on two main parts: introducing the goal of the questionnaire and showing how the form is filled and submitted, making the process easy to understand and visually engaging.",
+          "visitUrl": "hhttps://www.instagram.com/reel/DNIOvD0zhC3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/sosialisasiDPM.mp4",
+          "showVisitButton": true,
+          "tags": ["Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#0e1c38,#182848)",
+          "hidden": true
+        },
+        {
+          "id": 7,
+          "title": "After Movie BAKSA Asrama UPI 2025",
+          "desc": "Cinematic aftermovie of the BAKSA Asrama UPI 2025 event with dynamic pacing and polished transitions.",
+          "detail": "Aftermovie video documenting the BAKSA Asrama UPI 2025 event with a cinematic editing style. The production highlights the atmosphere of the event through dynamic scene transitions, selected highlight moments, and polished visual treatment. It combines energetic pacing with clean motion graphics to create an engaging recap that captures the spirit and activities of the event.",
+          "visitUrl": "https://www.instagram.com/reel/DLMXn3eT56F/?utm_source=ig_web_copy_link",
+          "videoUrl": "src/assets/project_assets/baksaasrama.mp4",
+          "showVisitButton": true,
+          "tags": ["Premiere Pro"],
+          "bgGradient": "linear-gradient(135deg,#0e1c38,#182848)",
+          "hidden": true
+        },
+        {
+          "id": 8,
+          "title": "Motion Graphic Computer Operating System ",
+          "desc": "Educational motion graphics video explaining computer operating systems with visual storytelling.",
+          "detail": "Motion graphic video created to explain the concept of computer operating systems through clear visual storytelling. The video presents key information in a simple and engaging way using animated shapes, icons, text transitions, and structured scenes. It is designed to help viewers understand the basic function, role, and components of an operating system through concise and visually appealing motion design.",
+          "visitUrl": "https://www.instagram.com/reel/DPaiy-KjaY2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "videoUrl": "src/assets/project_assets/motionSO.mp4",
+          "showVisitButton": true,
           "tags": ["Premiere Pro"],
           "bgGradient": "linear-gradient(135deg,#0e1c38,#182848)",
           "hidden": true
@@ -110,24 +151,66 @@
       "projects": [
         {
           "id": 1,
-          "title": "Brand Identity Kit",
-          "desc": "Logo system and visual guideline for student brand campaign.",
+          "title": "Maskot Perry",
+          "desc": "Mascot identity design for a student branding campaign.",
+          "detail": "Mascot identity project developed for a student brand campaign. The design focuses on creating a friendly and memorable character visual that can represent the brand across different promotional media.",
+          "imageUrl": "src/assets/project_assets/design_maskot.png",
+          "showVisitButton": false,
           "tags": ["Illustrator", "Photoshop"],
           "bgGradient": "linear-gradient(135deg,#1b1135,#2e1a54)",
           "hidden": false
         },
         {
           "id": 2,
-          "title": "Social Media Design Pack",
-          "desc": "Carousel and reels cover templates for monthly social content.",
+          "title": "LOGO Reconsume",
+          "desc": "Logo design for a sustainable reconsumption brand concept.",
+          "detail": "Logo identity created for Reconsume, a brand concept centered on sustainability and reuse. The design explores a clean and modern visual language to communicate eco-friendly values, flexibility, and a contemporary brand image. It is built to work across packaging, social media, and promotional materials.",
+          "imageUrl": "src/assets/project_assets/design_reconsume.png",
+          "showVisitButton": false,
           "tags": ["Figma", "Canva"],
           "bgGradient": "linear-gradient(135deg,#12253e,#1d3f64)",
           "hidden": false
         },
         {
           "id": 3,
-          "title": "Event Poster Series",
-          "desc": "Poster collection for campus events with modern visual language.",
+          "title": "Vector Art Character",
+          "desc": "Vector character artwork with bold shapes and expressive styling.",
+          "detail": "Vector art project featuring a stylized character illustration built with clean shapes, strong outlines, and balanced color selection. The artwork emphasizes expression, proportion, and visual clarity, making it suitable for digital posters, profile visuals, or promotional assets that need a distinctive character-based composition.",
+          "imageUrl": "src/assets/project_assets/design_vector.png",
+          "showVisitButton": false,
+          "tags": ["Illustrator", "InDesign"],
+          "bgGradient": "linear-gradient(135deg,#2e1030,#4a1845)",
+          "hidden": false
+        },
+        {
+          "id": 4,
+          "title": "Map OLKA UPI 2025",
+          "desc": "Event map design for OLKA UPI 2025 with clear navigation layout.",
+          "detail": "Informational map design created for OLKA UPI 2025 to help participants understand event locations and navigation points more easily. The layout balances clarity and visual hierarchy, using structured placement, readable typography, and color-coded elements to support fast orientation during the event.",
+          "imageUrl": "src/assets/project_assets/design_map.png",
+          "showVisitButton": false,
+          "tags": ["Illustrator", "InDesign"],
+          "bgGradient": "linear-gradient(135deg,#2e1030,#4a1845)",
+          "hidden": true
+        },
+        {
+          "id": 5,
+          "title": "UI/UX for Workout App",
+          "desc": "UI/UX design concept for a workout application.",
+          "detail": "User interface and experience concept designed for a workout application focused on fitness tracking and exercise routines. The design explores a clean dashboard, intuitive navigation, and easy access to workout features so users can manage their fitness activity comfortably on mobile devices.",
+          "imageUrl": "src/assets/project_assets/design_UI.png",
+          "showVisitButton": false,
+          "tags": ["Illustrator", "InDesign"],
+          "bgGradient": "linear-gradient(135deg,#2e1030,#4a1845)",
+          "hidden": true
+        },
+        {
+          "id": 6,
+          "title": "Workout Poster",
+          "desc": "Promotional poster design for a workout and fitness theme.",
+          "detail": "Poster design created for a workout-themed promotional purpose, using strong typography, energetic composition, and bold visual contrast. The layout is built to communicate fitness motivation clearly while keeping the overall design modern, dynamic, and eye-catching for both print and digital use.",
+          "imageUrl": "src/assets/project_assets/design_poster.png",
+          "showVisitButton": false,
           "tags": ["Illustrator", "InDesign"],
           "bgGradient": "linear-gradient(135deg,#2e1030,#4a1845)",
           "hidden": true

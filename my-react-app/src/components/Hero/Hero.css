@@ -411,7 +411,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
   #hero {
     padding: 200px 16px 200px;
   }

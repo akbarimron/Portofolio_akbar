@@ -50,8 +50,8 @@ export default function CustomCursor() {
       const dx = target.current.x - current.current.x;
       const dy = target.current.y - current.current.y;
 
-      current.current.x += dx * 0.18;
-      current.current.y += dy * 0.18;
+      current.current.x += dx * 0.34;
+      current.current.y += dy * 0.34;
 
       if (ringRef.current) {
         ringRef.current.style.transform = `translate3d(${current.current.x}px, ${current.current.y}px, 0)`;

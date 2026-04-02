@@ -27,19 +27,23 @@ nav.scrolled {
   display: none;
   background: transparent;
   border: none;
-  width: 34px;
-  height: 28px;
+  width: 56px;
+  height: 36px;
   padding: 0;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .nav-hamburger span {
   display: block;
-  width: 100%;
+  width: 30px;
   height: 3px;
   border-radius: 2px;
   background: #c5c5d8;
-  margin: 5px 0;
+  margin: 0;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -90,6 +94,47 @@ nav.scrolled {
   }
 }
 
+@media (max-width: 800px) {
+  nav {
+    height: 60px;
+    padding: 0 12px;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-logo {
+    font-size: 1.05rem;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    width: min(220px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 10px;
+    background: rgba(18, 17, 31, 0.96);
+    border: 1px solid rgba(120, 110, 200, 0.3);
+    overflow-x: hidden;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   nav {
     height: 60px;
@@ -105,17 +150,14 @@ nav.scrolled {
 @media (max-width: 640px) {
   nav {
     height: 55px;
-    padding: 0 14px;
-    gap: 20px;
+    padding: 0 10px;
+    justify-content: space-between;
+    gap: 0;
   }
 
   .nav-logo {
     font-size: 1rem;
-    left: 14px;
-  }
-
-  .nav-links {
-    gap: 16px;
+    left: auto;
   }
 
   .nav-links a {
@@ -127,34 +169,10 @@ nav.scrolled {
   nav {
     height: 56px;
     padding: 0 12px;
-    justify-content: space-between;
-    gap: 0;
   }
 
   .nav-logo {
     font-size: 0.95rem;
-  }
-
-  .nav-hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 56px;
-    right: 12px;
-    min-width: 170px;
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px;
-    border-radius: 10px;
-    background: rgba(18, 17, 31, 0.96);
-    border: 1px solid rgba(120, 110, 200, 0.3);
-  }
-
-  .nav-links.open {
-    display: flex;
   }
 
   .nav-links a {
