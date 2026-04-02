@@ -22,8 +22,7 @@ export default function FloatingCode() {
   useEffect(() => {
     let activeCount = 0;
     const maxActive = 5;
-    const timeoutIds: NodeJS.Timeout[] = [];
-    let intervalId: NodeJS.Timeout;
+    const timeoutIds: Array<ReturnType<typeof setTimeout>> = [];
 
     const spawnCode = () => {
       if (activeCount >= maxActive) return;
@@ -52,7 +51,7 @@ export default function FloatingCode() {
     timeoutIds.push(timeout1, timeout2);
 
     // Recurring spawns
-    intervalId = setInterval(spawnCode, 2700);
+    const intervalId = setInterval(spawnCode, 2700);
 
     return () => {
       clearInterval(intervalId);
@@ -73,12 +72,18 @@ function FloatingCodeItem({ code }: { code: FloatingCode }) {
   const [displayText, setDisplayText] = useState('');
   const [isFading, setIsFading] = useState(false);
   const charIndexRef = useRef(0);
-  const intervalsRef = useRef<{ typing?: NodeJS.Timeout; blink?: NodeJS.Timeout; fade?: NodeJS.Timeout }>({});
+  const intervalsRef = useRef<{
+    typing?: ReturnType<typeof setInterval>;
+    blink?: ReturnType<typeof setInterval>;
+    fade?: ReturnType<typeof setTimeout>;
+  }>({});
   
   // Generate position once, don't regenerate
   const positionRef = useRef(8 + Math.random() * 80);
 
   useEffect(() => {
+    const timers = intervalsRef.current;
+
     // Reset state
     charIndexRef.current = 0;
     setDisplayText('');
@@ -131,9 +136,9 @@ function FloatingCodeItem({ code }: { code: FloatingCode }) {
 
     // Cleanup function
     return () => {
-      if (intervalsRef.current.typing) clearInterval(intervalsRef.current.typing);
-      if (intervalsRef.current.blink) clearInterval(intervalsRef.current.blink);
-      if (intervalsRef.current.fade) clearTimeout(intervalsRef.current.fade);
+      if (timers.typing) clearInterval(timers.typing);
+      if (timers.blink) clearInterval(timers.blink);
+      if (timers.fade) clearTimeout(timers.fade);
     };
   }, [code.snippet]);
 
